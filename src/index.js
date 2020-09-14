@@ -4,10 +4,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "jquery/dist/jquery.slim";
+import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper";
-import "bootstrap/dist/js/bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap";
+import "./home/Home.css";
+import "materialize-css/dist/css/materialize.min.css";
+import "materialize-css/dist/js/materialize";
 
 ReactDOM.render(
   <React.StrictMode>

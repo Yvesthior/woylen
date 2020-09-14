@@ -6,34 +6,34 @@ const Menu = () => {
     <div>
       <header className="">
         <div className="container">
-          <div className="row bg-light">
-            <div className="col-md-12 col-lg-12 col-sm-12 d-flex mt-1">
-              <div className="col-2 p-1">
+          <div className="row d-flex">
+            <div className="offset-4 offset-md-7 offset-lg-8 d-flex mt-1 justify-content-center">
+              <div className="col-7">
                 {" "}
                 <i className="fa fa-sign-in" aria-hidden="true"></i> Se
                 Connecter
               </div>
-              <div className="col-2 p-1">
+              <div className="col-8">
                 {" "}
                 <i className="fas fa-user-plus"></i> S'inscrire
               </div>
             </div>
           </div>
           <div className="row mt-4 ">
-            <div className="col-lg-12 col-md-12 col-sm-12 d-flex">
-              <div className="col-3">
+            <div className="col-lg-12 col-md-12 col-sm-12 d-flex col-12">
+              <div className="col-4">
                 {" "}
-                <h1>WOYLEN</h1>
+                <h2>WOYLEN</h2>
               </div>
-              <div className="col-7">
-                <form class="form-inline col-12 my-2">
+              <div className="col-9">
+                <form class="form-inline col-12">
                   <input
-                    className="form-control mr-sm-2 col-10"
+                    className="form-control col-10 col-md-8 col-lg-8"
                     type="search"
                     placeholder="Je cherche une partition"
                     aria-label="Search"
                   />
-                  <button className="btn btn-success" type="submit">
+                  <button className="btn btn-success col-2 " type="submit">
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form>
@@ -45,30 +45,18 @@ const Menu = () => {
 
       {/* MENU SECTION BEGINNING */}
       <section>
-        <div className="container mt-4">
+        <div className="container mt-4 d-flex">
           <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12">
-              <ul className="d-flex">
+            <div className="col-lg-12 col-md-12 col-sm-12 col-12 justify-content-space-around">
+              <ul className="d-flex ">
                 <Link to="/" className="col navLink">
                   <li className="m-acceuil">Acceuil</li>
                 </Link>
-                <Link to="/catalogue" className="col navLink">
-                  <li className="m-catalogue">Catalogue</li>
+                <Link to="/categories" className="col navLink">
+                  <li className="m-acceuil">Catégories</li>
                 </Link>
-                <Link to="/messe" className="col navLink">
-                  <li className="m-messe">Messe</li>
-                </Link>
-                <Link to="/mariage" className="col navLink">
-                  <li className="m-mariage">Mariage</li>
-                </Link>
-                <Link to="/bapteme" className="col">
-                  <li className="m-bapteme">Baptème</li>
-                </Link>
-                <Link to="/funerailles" className="col">
-                  <li className="m-funerailles">Funérailles</li>
-                </Link>
-                <Link to="/infos" className="col">
-                  <li className="m-infos">Infos</li>
+                <Link to="/parametres" className="col navLink">
+                  <li className="m-infos">Paramètres</li>
                 </Link>
               </ul>
             </div>
