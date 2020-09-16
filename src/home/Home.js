@@ -114,85 +114,83 @@ class Home extends Component {
         </div>
         {/*sidebar end*/}
         <div className="content">
-          <div className="row">
+          <div className="row white">
             <div className="col s12">
-              <ul className="tabs">
-                <li className="tab col s2">
-                  <a href="#entree">Entrée</a>
-                </li>
-                <li className="tab col s2">
-                  <a className="active" href="#kyrie">
-                    Kyrie
-                  </a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#gloria">Gloire a Dieu</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#psaume">Psaume</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#acclamation">Acclamation</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#pu">Prière Universelle</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#offertoire">Offertoire</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#sanctus">Sanctus</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#agnus">Agnus</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#communion">Communion</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#actiondegrace">Action de Grâces</a>
-                </li>
-                <li className="tab col s2">
-                  <a href="#sortie">Sortie</a>
-                </li>
-              </ul>
+              <div className="col s3 etape-btn">
+                {" "}
+                <a
+                  class="waves-effect waves-light btn modal-trigger"
+                  href="#modal1"
+                >
+                  Étapes de la Célébration
+                </a>
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Étapes de la célébration : </h4>
+                    <div className="row col s12 elements-etape">
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Entrée
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Kyrie
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Gloria
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Psaume
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Acclamation
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Prière Universelle
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        offertoire
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Sanctus
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Agnus
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Communion
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Action de Grâces
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Aspersion
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Consentement
+                      </div>
+                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        Divers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col s9">
+                <div className="col s8">
+                  <div class="input-field">
+                    <input id="partition" type="text" class="validate" />
+                    <label for="partition">Rechercher une Partition</label>
+                  </div>
+                </div>
+                <div className="col s4 search-btn">
+                  <div className="waves-effect waves-light btn">
+                    <i class="material-icons left">search</i> Rechercher
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="entree" className="col s12">
-              Cantiques d'Entrée
-            </div>
-            <div id="kyrie" className="col s12">
-              Cantiques kyrie
-            </div>
-            <div id="gloria" className="col s12">
-              Cantiques Gloria
-            </div>
-            <div id="psaume" className="col s12">
-              Cantiques Psaumes
-            </div>
-            <div id="acclamation" className="col s12">
-              Cantiques Acclamation
-            </div>
-            <div id="pu" className="col s12">
-              Cantiques Priere Universelle
-            </div>
-            <div id="offertoire" className="col s12">
-              Cantiques Offertoire
-            </div>
-            <div id="sanctus" className="col s12">
-              Cantiques Sanctus
-            </div>
-            <div id="agnus" className="col s12">
-              Cantiques Agnus
-            </div>
-            <div id="communion" className="col s12">
-              Cantiques Communion
-            </div>
-            <div id="actiondegrace" className="col s12">
-              Cantiques Action de Graces
-            </div>
-            <div id="sortie" className="col s12">
-              Cantiques Sortie
-            </div>
+          </div>
+          <div className="row">
+            <h2>Contenu Main de l'application</h2>
           </div>
         </div>
       </div>
