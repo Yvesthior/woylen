@@ -3,25 +3,25 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
 } */
-.elements-etape {
+/* .elements-etape {
   margin-left: 10% !important;
-}
+} */
 
 .etapes-opt-btn {
   margin-top: 1%;
-  margin-right: 1%;
-  margin-left: 1%
+  /* margin-right: 1%; */
+  margin-left: 5% !important;
 }
 
 .etape-btn,
 .search-btn {
-  margin-top: 2%;
+  margin-top: 2.5%;
   text-align: center;
 }
 
 .search-btn {
-  margin-top: 2.4%;
-  margin-left: -8% !important;
+  margin-top: 4%;
+  margin-left: -3% !important;
 }
 
 header {

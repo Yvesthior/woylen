@@ -114,67 +114,82 @@ class Home extends Component {
         </div>
         {/*sidebar end*/}
         <div className="content">
-          <div className="row white">
+          <div className="row white container">
             <div className="col s12">
-              <div className="col s3 etape-btn">
+              <div className="col s4 etape-btn">
                 {" "}
                 <a
                   class="waves-effect waves-light btn modal-trigger"
                   href="#modal1"
                 >
+                  <i class="material-icons left">list</i>
                   Étapes de la Célébration
                 </a>
                 <div id="modal1" class="modal">
                   <div class="modal-content">
-                    <h4>Étapes de la célébration : </h4>
+                    <h4> Étapes de la célébration : </h4>
                     <div className="row col s12 elements-etape">
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Entrée
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Kyrie
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Gloria
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Psaume
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Acclamation
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Prière Universelle
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         offertoire
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Sanctus
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Agnus
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Communion
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Action de Grâces
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>
                         Aspersion
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>{" "}
                         Consentement
                       </div>
                       <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
+                        <i className="material-icons left">chevron_right</i>{" "}
                         Divers
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col s9">
+              <div className="col s8">
                 <div className="col s8">
                   <div class="input-field">
                     <input id="partition" type="text" class="validate" />
@@ -183,7 +198,7 @@ class Home extends Component {
                 </div>
                 <div className="col s4 search-btn">
                   <div className="waves-effect waves-light btn">
-                    <i class="material-icons left">search</i> Rechercher
+                    <i class="material-icons left">search</i>Rechercher
                   </div>
                 </div>
               </div>
