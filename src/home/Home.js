@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
+import EtapesCelebration from "../components/EtapesCelebration.js";
 // import { render } from "@testing-library/react";
 // import "./Home.css";
 
 class Home extends Component {
-  state = { celebrations: [] };
+  state = { celebrations: [], categories: [] };
   async componentDidMount() {
     const celebrations = await axios
       .get("https://woylen.herokuapp.com/celebrations")
@@ -12,10 +13,15 @@ class Home extends Component {
         return response.data;
       })
       .catch((error) => console.log(error.message));
-    this.setState({ celebrations });
+    const categories = await axios
+      .get("https://woylen.herokuapp.com/categories")
+      .then((response) => response.data)
+      .catch((error) => console.log(error.message));
+    this.setState({ celebrations, categories });
   }
 
   render() {
+    console.log(this.state.categories);
     return (
       <div>
         <input type="checkbox" id="check" />
@@ -116,89 +122,17 @@ class Home extends Component {
         <div className="content">
           <div className="row white container">
             <div className="col s12">
-              <div className="col s4 etape-btn">
-                {" "}
-                <a
-                  class="waves-effect waves-light btn modal-trigger"
-                  href="#modal1"
-                >
-                  <i class="material-icons left">list</i>
-                  Étapes de la Célébration
-                </a>
-                <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4> Étapes de la célébration : </h4>
-                    <div className="row col s12 elements-etape">
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Entrée
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Kyrie
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Gloria
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Psaume
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Acclamation
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Prière Universelle
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        offertoire
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Sanctus
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Agnus
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Communion
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Action de Grâces
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>
-                        Aspersion
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>{" "}
-                        Consentement
-                      </div>
-                      <div className="waves-effect waves-light btn col s3 etapes-opt-btn">
-                        <i className="material-icons left">chevron_right</i>{" "}
-                        Divers
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <EtapesCelebration categories={this.state.categories} />
               <div className="col s8">
                 <div className="col s8">
-                  <div class="input-field">
-                    <input id="partition" type="text" class="validate" />
-                    <label for="partition">Rechercher une Partition</label>
+                  <div className="input-field">
+                    <input id="partition" type="text" className="validate" />
+                    <label htmlFor="partition">Rechercher une Partition</label>
                   </div>
                 </div>
                 <div className="col s4 search-btn">
                   <div className="waves-effect waves-light btn">
-                    <i class="material-icons left">search</i>Rechercher
+                    <i className="material-icons left">search</i>Rechercher
                   </div>
                 </div>
               </div>
